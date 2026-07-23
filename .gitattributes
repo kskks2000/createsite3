@@ -1,0 +1,67 @@
+# ---------------------------------------------------------------------------
+# Normalize line endings: auto-detect text files and normalize to LF in the
+# repository, checked out with native endings on each platform.
+# ---------------------------------------------------------------------------
+* text=auto
+
+# ---------------------------------------------------------------------------
+# Explicitly declare files that should always use LF
+# ---------------------------------------------------------------------------
+*.sh    text eol=lf
+*.bash  text eol=lf
+
+# ---------------------------------------------------------------------------
+# Files that should always use CRLF
+# ---------------------------------------------------------------------------
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# ---------------------------------------------------------------------------
+# Common source / text files (treated as text)
+# ---------------------------------------------------------------------------
+*.c     text
+*.cpp   text
+*.h     text
+*.hpp   text
+*.cs    text
+*.css   text
+*.scss  text
+*.html  text
+*.java  text
+*.js    text
+*.jsx   text
+*.json  text
+*.md    text
+*.py    text
+*.rb    text
+*.sql   text
+*.svg   text
+*.ts    text
+*.tsx   text
+*.txt   text
+*.xml   text
+*.yml   text
+*.yaml  text
+
+# ---------------------------------------------------------------------------
+# Binary files (never diff or normalize)
+# ---------------------------------------------------------------------------
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.mp3   binary
+*.mp4   binary
+*.mov   binary
+*.pdf   binary
+*.zip   binary
+*.gz    binary
+*.tar   binary
+*.7z    binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
