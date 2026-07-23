@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>결 GYEOL · K-Beauty Skincare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#F7F1EA;color:#2B2420;font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:#A8674E}
+  ::selection{background:#E7C9B8}
+  @keyframes kb{0%{transform:scale(1.02)}100%{transform:scale(1.14)}}
+  @keyframes floatUp{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+
+  /* hero slideshow */
+  .hero-layer{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+  .hero-layer.is-active{opacity:1}
+  .hero-layer img{width:100%;height:100%;object-fit:cover;animation:kb 8s ease-in-out infinite alternate}
+
+  /* buttons */
+  .btn-solid{transition:transform .3s ease}
+  .btn-solid:hover{transform:translateY(-2px)}
+
+  /* product cards */
+  .product{cursor:pointer}
+  .product .p-media{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:3px;background:#EDE2D6}
+  .product .p-base,.product .p-over{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .product .p-base{transition:transform 1.1s cubic-bezier(.2,.7,.2,1);transform:scale(1)}
+  .product .p-over{opacity:0;transform:scale(1.03);transition:opacity .8s ease, transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .product:hover .p-base{transform:scale(1.07)}
+  .product.has-hover:hover .p-over{opacity:1;transform:scale(1.07)}
+
+  /* insta grid hover */
+  .insta img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .insta:hover img{transform:scale(1.08)}
+
+  @media(max-width:760px){
+    .story{grid-template-columns:1fr !important}
+    .insta-grid{grid-template-columns:repeat(3,1fr) !important}
+  }
+</style>
+</head>
+<body>
+<div style="max-width:100%;overflow-x:hidden">
+
+  <!-- announcement -->
+  <div id="announce" style="background:#2B2420;color:#F7F1EA;font-size:12.5px;letter-spacing:.06em;padding:9px 20px;text-align:center;font-weight:300">
+    무료배송 · 5만원 이상 구매 시 &nbsp;·&nbsp; 신규회원 <b style="font-weight:500">15% 쿠폰</b> 즉시 지급
+  </div>
+
+  <!-- header -->
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,5vw,64px);position:sticky;top:0;z-index:50;background:rgba(247,241,234,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(43,36,32,.08)">
+    <nav style="display:flex;gap:26px;font-size:14px;font-weight:400;flex:1">
+      <a href="#best">베스트</a>
+      <a href="#story" style="opacity:.6">스킨케어</a>
+      <a href="#story" style="opacity:.6">선케어</a>
+      <a href="#story">브랜드</a>
+    </nav>
+    <a href="#top" style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;letter-spacing:.14em;line-height:1;display:flex;align-items:baseline;gap:8px">
+      <span style="font-family:'Noto Serif KR',serif;font-size:24px">결</span>GYEOL
+    </a>
+    <div style="display:flex;gap:22px;font-size:14px;justify-content:flex-end;flex:1">
+      <a href="#story" style="opacity:.6">검색</a>
+      <a href="#story" style="opacity:.6">로그인</a>
+      <a href="#best">장바구니 <span style="font-size:11px;vertical-align:super">(0)</span></a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section id="top" style="position:relative;height:min(88vh,860px);overflow:hidden;background:#EDE2D6">
+    <div class="hero-layer is-active"><img src="assets/hf_20260723_145922_b88c6cdd-9bd7-4de9-a145-57a7052a9198.png" style="object-position:center 28%"></div>
+    <div class="hero-layer"><img src="assets/hf_20260723_145924_ccd54e81-7060-4b40-b6ff-0752b2ed6cea.png" style="object-position:center 25%"></div>
+    <div class="hero-layer"><img src="assets/hf_20260723_145914_215addf8-34ec-4365-af77-c7e4e0f4ce34.png" style="object-position:center 22%"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,36,32,.42) 0%,rgba(43,36,32,.12) 42%,transparent 70%)"></div>
+    <div style="position:absolute;left:clamp(20px,5vw,64px);bottom:clamp(48px,8vw,96px);max-width:560px;color:#FFFDFB;animation:floatUp 1.1s ease both">
+      <p style="font-size:13px;letter-spacing:.32em;text-transform:uppercase;font-weight:400;opacity:.92;margin-bottom:20px">K-Beauty Skincare</p>
+      <h1 style="font-family:'Noto Serif KR',serif;font-weight:600;font-size:clamp(38px,5.4vw,68px);line-height:1.12;letter-spacing:-.01em;text-wrap:balance">피부의 결,<br>그대로 빛나다</h1>
+      <p style="font-size:clamp(15px,1.4vw,17px);font-weight:300;line-height:1.7;margin:22px 0 34px;opacity:.94;max-width:420px">매일의 루틴을 가장 건강하게. 순한 성분과 깊은 수분으로 완성하는 결 스킨케어.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#best" class="btn-solid" style="background:#F7F1EA;color:#2B2420;padding:15px 30px;font-size:14px;font-weight:500;border-radius:2px">베스트셀러 보기</a>
+        <a href="#story" style="border:1px solid rgba(255,255,255,.7);color:#FFFDFB;padding:15px 30px;font-size:14px;font-weight:400;border-radius:2px">브랜드 스토리</a>
+      </div>
+    </div>
+    <div style="position:absolute;right:clamp(20px,5vw,64px);bottom:clamp(48px,8vw,96px);display:flex;gap:8px" id="hero-dots"></div>
+  </section>
+
+  <!-- trust badges -->
+  <section style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(30px,6vw,90px);padding:34px 24px;border-bottom:1px solid rgba(43,36,32,.08);font-size:13.5px;letter-spacing:.04em;color:#6E635B">
+    <span>🌿 비건 포뮬러</span>
+    <span>피부과 테스트 완료</span>
+    <span>무향 · 저자극</span>
+    <span>100% 정품 보증</span>
+  </section>
+
+  <!-- best sellers -->
+  <section id="best" style="padding:clamp(64px,8vw,110px) clamp(20px,5vw,64px)">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(36px,4vw,56px);flex-wrap:wrap;gap:16px">
+      <div>
+        <p style="font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:#A8674E;margin-bottom:14px">Best Seller</p>
+        <h2 style="font-family:'Noto Serif KR',serif;font-weight:600;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.01em">가장 사랑받는 네 가지 루틴</h2>
+      </div>
+      <p style="font-size:14px;color:#8A7F76;max-width:300px;line-height:1.6">마우스를 올리면 실제 모델이 제품을 사용하는 순간을 보여드려요.</p>
+    </div>
+
+    <div id="product-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:clamp(18px,2vw,30px)"></div>
+  </section>
+
+  <!-- story -->
+  <section id="story" class="story" style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:600px;background:#EFE5DA">
+    <div style="position:relative;overflow:hidden;min-height:400px">
+      <img src="assets/hf_20260723_145910_0f8d9434-fdf7-47e5-91ee-b30c013903fe.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
+    </div>
+    <div style="padding:clamp(48px,6vw,96px);display:flex;flex-direction:column;justify-content:center">
+      <p style="font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:#A8674E;margin-bottom:18px">Our Story</p>
+      <h2 style="font-family:'Noto Serif KR',serif;font-weight:600;font-size:clamp(26px,3vw,40px);line-height:1.3;letter-spacing:-.01em">결은 피부의<br>가장 정직한 언어입니다</h2>
+      <p style="font-size:15px;color:#5F544C;line-height:1.85;margin-top:26px;max-width:440px">화려한 수식어 대신, 피부가 본래 가진 결에 집중했습니다. 꼭 필요한 성분만 담고, 자극이 될 수 있는 요소는 덜어냈습니다. 매일 써도 부담 없는 루틴, 그것이 결이 지키는 약속입니다.</p>
+      <a href="#best" style="margin-top:32px;font-size:14px;font-weight:500;border-bottom:1px solid #2B2420;padding-bottom:4px;width:fit-content">브랜드 이야기 더 보기 →</a>
+    </div>
+  </section>
+
+  <!-- reviews -->
+  <section style="padding:clamp(64px,8vw,110px) clamp(20px,5vw,64px);text-align:center">
+    <p style="font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:#A8674E;margin-bottom:14px">Reviews</p>
+    <h2 style="font-family:'Noto Serif KR',serif;font-weight:600;font-size:clamp(26px,3.2vw,40px)">평점 <span style="color:#C0795F">4.9</span> / 5.0</h2>
+    <p style="font-size:14px;color:#8A7F76;margin-top:12px">12,400개 이상의 실사용 후기</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:clamp(36px,4vw,56px);max-width:1000px;margin-left:auto;margin-right:auto;text-align:left">
+      <div style="background:#FFFDFB;border:1px solid rgba(43,36,32,.07);border-radius:4px;padding:28px">
+        <span style="color:#C0795F;font-size:13px;letter-spacing:.12em">★★★★★</span>
+        <p style="font-size:14.5px;line-height:1.75;margin:14px 0 18px;color:#3B332D">"세안 후 당김이 하나도 없어요. 아침저녁으로 쓰는데 피부 결이 정리되는 느낌이 확실합니다."</p>
+        <p style="font-size:12.5px;color:#A79C93">김서연 · 클렌저 재구매</p>
+      </div>
+      <div style="background:#FFFDFB;border:1px solid rgba(43,36,32,.07);border-radius:4px;padding:28px">
+        <span style="color:#C0795F;font-size:13px;letter-spacing:.12em">★★★★★</span>
+        <p style="font-size:14.5px;line-height:1.75;margin:14px 0 18px;color:#3B332D">"에센스 한 방울이면 수분이 꽉 차요. 끈적임 없이 흡수되는 게 제일 마음에 들어요."</p>
+        <p style="font-size:12.5px;color:#A79C93">이지우 · 에센스 세럼</p>
+      </div>
+      <div style="background:#FFFDFB;border:1px solid rgba(43,36,32,.07);border-radius:4px;padding:28px">
+        <span style="color:#C0795F;font-size:13px;letter-spacing:.12em">★★★★★</span>
+        <p style="font-size:14.5px;line-height:1.75;margin:14px 0 18px;color:#3B332D">"톤업 선크림인데 백탁이 없어요. 데일리로 바르기 딱 좋고 마무리가 자연스러워요."</p>
+        <p style="font-size:12.5px;color:#A79C93">박하늘 · 톤업 선크림</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- instagram -->
+  <section style="padding:0 0 clamp(64px,8vw,110px)">
+    <div style="text-align:center;margin-bottom:28px">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,34px);font-weight:500;letter-spacing:.04em">@gyeol.official</h2>
+      <p style="font-size:13.5px;color:#8A7F76;margin-top:6px">일상 속 결을 인스타그램에서 만나보세요</p>
+    </div>
+    <div class="insta-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:4px">
+      <div class="insta" style="aspect-ratio:1;overflow:hidden"><img src="assets/hf_20260723_145907_b33f7889-7c51-4e54-bbbe-c3b3fa24e5d3.png"></div>
+      <div class="insta" style="aspect-ratio:1;overflow:hidden"><img src="assets/hf_20260723_145922_b88c6cdd-9bd7-4de9-a145-57a7052a9198.png"></div>
+      <div class="insta" style="aspect-ratio:1;overflow:hidden"><img src="assets/hf_20260723_145910_0f8d9434-fdf7-47e5-91ee-b30c013903fe.png"></div>
+      <div class="insta" style="aspect-ratio:1;overflow:hidden"><img src="assets/hf_20260723_145924_ccd54e81-7060-4b40-b6ff-0752b2ed6cea.png"></div>
+      <div class="insta" style="aspect-ratio:1;overflow:hidden"><img src="assets/hf_20260723_145912_fb2e6829-c6ec-42e0-b4ba-ddde8c070adc.png"></div>
+      <div class="insta" style="aspect-ratio:1;overflow:hidden"><img src="assets/hf_20260723_145914_215addf8-34ec-4365-af77-c7e4e0f4ce34.png"></div>
+    </div>
+  </section>
+
+  <!-- newsletter -->
+  <section style="background:#2B2420;color:#F7F1EA;padding:clamp(56px,7vw,96px) clamp(20px,5vw,64px);text-align:center">
+    <h2 style="font-family:'Noto Serif KR',serif;font-weight:500;font-size:clamp(24px,3vw,36px)">가장 먼저 만나는 결</h2>
+    <p style="font-size:14.5px;font-weight:300;opacity:.8;margin:16px 0 30px;line-height:1.7">신제품 소식과 회원 전용 혜택을 이메일로 받아보세요.</p>
+    <form id="subscribe" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+      <input type="email" required placeholder="이메일 주소" style="flex:1;min-width:220px;background:transparent;border:1px solid rgba(247,241,234,.3);color:#F7F1EA;padding:14px 18px;font-size:14px;border-radius:2px;outline:none;font-family:inherit">
+      <button type="submit" style="background:#F7F1EA;color:#2B2420;border:none;padding:14px 28px;font-size:14px;font-weight:500;border-radius:2px;cursor:pointer;font-family:inherit">구독하기</button>
+    </form>
+  </section>
+
+  <!-- footer -->
+  <footer style="background:#211B18;color:#B9AEA4;padding:clamp(48px,6vw,72px) clamp(20px,5vw,64px);font-size:13px">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;max-width:1200px;margin:0 auto">
+      <div style="max-width:280px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:.14em;color:#F7F1EA;margin-bottom:16px">결 GYEOL</div>
+        <p style="line-height:1.7;font-weight:300;opacity:.8">피부 본연의 결에 집중하는 K-뷰티 스킨케어 브랜드.</p>
+      </div>
+      <div style="display:flex;gap:clamp(30px,5vw,72px);flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <b style="color:#F7F1EA;font-weight:500;margin-bottom:4px">SHOP</b>
+          <a href="#best">베스트셀러</a><a href="#best">클렌저</a><a href="#best">에센스</a><a href="#best">선케어</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <b style="color:#F7F1EA;font-weight:500;margin-bottom:4px">ABOUT</b>
+          <a href="#story">브랜드</a><a href="#story">성분</a><a href="#story">리뷰</a><a href="#story">고객센터</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(247,241,234,.1);font-size:11.5px;opacity:.55;line-height:1.6">
+      © 2026 GYEOL. All rights reserved. · 이미지는 AI로 생성된 컨셉 비주얼입니다.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  // ---- configurable props (ported from the .dc component) ----
+  var config = {
+    accent: '#C0795F',
+    showAnnounce: true,
+    autoplay: true,
+    heroSpeed: 4000
+  };
+
+  var B = 'assets/';
+
+  // ---- announcement toggle ----
+  if (!config.showAnnounce) {
+    var a = document.getElementById('announce');
+    if (a) a.style.display = 'none';
+  }
+
+  // ---- products ----
+  var products = [
+    { name: '글로우 젤 클렌저', desc: '당김 없이 부드럽게, 순한 저자극 세안', price: '₩24,000', tag: 'BEST', reviews: '3,204', img: B + 'hf_20260723_145907_b33f7889-7c51-4e54-bbbe-c3b3fa24e5d3.png', hover: B + 'hf_20260723_145922_b88c6cdd-9bd7-4de9-a145-57a7052a9198.png', hasHover: true },
+    { name: '결 에센스 세럼', desc: '한 방울로 채우는 깊은 수분 광채', price: '₩42,000', tag: 'NEW', reviews: '2,918', img: B + 'hf_20260723_145910_0f8d9434-fdf7-47e5-91ee-b30c013903fe.png', hover: B + 'hf_20260723_145924_ccd54e81-7060-4b40-b6ff-0752b2ed6cea.png', hasHover: true },
+    { name: '수분 글로우 마스크 5매', desc: '지친 피부에 즉각 수분 충전', price: '₩22,000', tag: '', reviews: '4,551', img: B + 'hf_20260723_145912_fb2e6829-c6ec-42e0-b4ba-ddde8c070adc.png', hover: B + 'hf_20260723_145912_fb2e6829-c6ec-42e0-b4ba-ddde8c070adc.png', hasHover: false },
+    { name: '데일리 톤업 선크림 SPF50+', desc: '백탁 없이 자연스러운 톤업', price: '₩26,000', tag: '', reviews: '1,742', img: B + 'hf_20260723_145914_215addf8-34ec-4365-af77-c7e4e0f4ce34.png', hover: B + 'hf_20260723_145914_215addf8-34ec-4365-af77-c7e4e0f4ce34.png', hasHover: false }
+  ];
+
+  function tagStyle(tag) {
+    var bg = tag === 'NEW' ? config.accent : 'rgba(255,253,251,.92)';
+    var col = tag === 'NEW' ? '#FFFDFB' : '#2B2420';
+    return 'position:absolute;top:14px;left:14px;display:' + (tag ? 'inline-block' : 'none') +
+      ';background:' + bg + ';color:' + col +
+      ';font-size:10.5px;font-weight:600;letter-spacing:.14em;padding:5px 10px;border-radius:2px';
+  }
+
+  var grid = document.getElementById('product-grid');
+  products.forEach(function (p) {
+    var card = document.createElement('div');
+    card.className = 'product' + (p.hasHover ? ' has-hover' : '');
+    card.innerHTML =
+      '<div class="p-media">' +
+        '<img class="p-base" src="' + p.img + '" alt="' + p.name + '">' +
+        (p.hasHover ? '<img class="p-over" src="' + p.hover + '" alt="">' : '') +
+        '<span style="' + tagStyle(p.tag) + '">' + p.tag + '</span>' +
+      '</div>' +
+      '<div style="padding:18px 2px 0">' +
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">' +
+          '<h3 style="font-size:16px;font-weight:500;letter-spacing:-.01em">' + p.name + '</h3>' +
+          '<span style="font-size:15px;font-weight:500;white-space:nowrap">' + p.price + '</span>' +
+        '</div>' +
+        '<p style="font-size:13px;color:#8A7F76;margin-top:6px;line-height:1.5">' + p.desc + '</p>' +
+        '<div style="display:flex;align-items:center;gap:7px;margin-top:12px">' +
+          '<span style="color:#C0795F;font-size:12px;letter-spacing:.12em">★★★★★</span>' +
+          '<span style="font-size:12px;color:#A79C93">' + p.reviews + '</span>' +
+        '</div>' +
+      '</div>';
+    grid.appendChild(card);
+  });
+
+  // ---- hero slideshow ----
+  var layers = document.querySelectorAll('.hero-layer');
+  var dotsBox = document.getElementById('hero-dots');
+  if (dotsBox && !dotsBox.childNodes.length) {
+    layers.forEach(function (_, k) {
+      var d = document.createElement('span');
+      d.style.cssText = 'width:26px;height:2px;border-radius:2px;background:rgba(255,253,251,' + (k === 0 ? '.95' : '.4') + ');transition:background .4s ease';
+      dotsBox.appendChild(d);
+    });
+  }
+  if (config.autoplay && layers.length) {
+    var i = 0;
+    setInterval(function () {
+      i = (i + 1) % layers.length;
+      layers.forEach(function (el, k) { el.classList.toggle('is-active', k === i); });
+      var dots = dotsBox ? dotsBox.childNodes : [];
+      Array.prototype.forEach.call(dots, function (d, k) {
+        d.style.background = 'rgba(255,253,251,' + (k === i ? '.95' : '.4') + ')';
+      });
+    }, config.heroSpeed);
+  }
+
+  // ---- newsletter ----
+  var form = document.getElementById('subscribe');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.reset();
+      var btn = form.querySelector('button');
+      var original = btn.textContent;
+      btn.textContent = '구독 완료 ✓';
+      setTimeout(function () { btn.textContent = original; }, 2200);
+    });
+  }
+})();
+</script>
+</body>
+</html>
